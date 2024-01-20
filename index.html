@@ -10,22 +10,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Meteo App</title>
   </head>
   <body>
     <div class="weather-app">
       <section class="today-weather">
         <div class="today-temperature">
-          <div class="today-temperature-measure">
-            <h1>19</h1>
-          </div>
+          <h1>
+            <div
+              class="today-temperature-measure"
+              id="current-temperature"
+            ></div>
+          </h1>
           <div class="today-temperature-unit">ºC</div>
           <div class="today-temperature-icon">
             <img src="img/ic_cloudy.svg" alt="cloudy" />
           </div>
         </div>
         <div>
-          <h2><span id="city-name">New York City</span><span>, USA</span></h2>
+          <h2><span id="city-name"></span><span>, USA</span></h2>
         </div>
         <div><h3>Sunday 09:25</h3></div>
       </section>

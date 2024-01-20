@@ -3,30 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Meteo App</title>
   </head>
   <body>
-    <section class="today-weather">
-      <div>
-        <h1>19ºC <span>🌤️</span></h1>
-      </div>
-      <div><h2>New York City, USA</h2></div>
-      <div><h3>Sunday 09:25</h3></div>
-    </section>
-    <section class="weather-details">
-      <span>🌧️ Moderate Rain</span>
-      <span>💧 Humidity: 87%</span>
-      <span>💨 Wind: 7.2km/h</span>
-    </section>
-    <section class="search-city">
-      <form>
-        <input type="search" placeholder="Enter city name" />
-        <input type="submit" />
-      </form>
-    </section>
+    <div class="weather-app">
+      <section class="today-weather">
+        <div class="today-temperature">
+          <div class="today-temperature-measure">
+            <h1>19</h1>
+          </div>
+          <div class="today-temperature-unit">ºC</div>
+          <div class="today-temperature-icon">
+            <img src="img/ic_cloudy.svg" alt="cloudy" />
+          </div>
+        </div>
+        <div>
+          <h2><span id="city-name">New York City</span><span>, USA</span></h2>
+        </div>
+        <div><h3>Sunday 09:25</h3></div>
+      </section>
+      <section class="weather-details">
+        <div>🌧️ Moderate Rain</div>
+        <div>💧 Humidity: 87%</div>
+        <div>💨 Wind: 7.2km/h</div>
+      </section>
+      <section class="search-city">
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter city name"
+            class="search-form-input"
+            id="search-form-input"
+            required
+          />
+          <input type="submit" class="search-form-button" />
+        </form>
+      </section>
+    </div>
     <footer>
-      This project was coded by <a href="">Charlotte Lee</a> and is on
-      <a href="">GitHub</a> and hosted on <a href="">Netlify</a>.
+      This project was coded by
+      <a href="https://www.linkedin.com/in/charlottelhm/">Charlotte Lee</a> and
+      is on <a href="">GitHub</a> and hosted on <a href="">Netlify</a>.
     </footer>
+    <script src="src/script.js"></script>
   </body>
 </html>

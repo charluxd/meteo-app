@@ -1,33 +1,36 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #1a202e;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   background-color: #f1fafa;
 }
 
 h1 {
   font-size: 72px;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.05;
   color: #111827;
 }
 
 h2 {
-  font-size: 28px;
-  padding-left: 48px;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 400;
   color: #4b5563;
+  padding: 8px 0;
+  margin: 0;
   padding-left: 48px;
 }
 
 h1,
-h2,
-h3 {
-  font-weight: 500;
+h2 {
   margin: 0;
+  padding-left: 48px;
 }
 
 .weather-app {
@@ -40,7 +43,7 @@ h3 {
 
 .today-weather {
   border-radius: 24px 24px 0 0;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/035/original/img_day.png?1705568204");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/675/original/img_background.png?1707039506");
   background-size: cover;
   height: 385px;
 }
@@ -48,7 +51,7 @@ h3 {
 .today-temperature {
   display: flex;
   align-items: start;
-  padding: 40px 0 0 48px;
+  padding: 40px 0 0 0;
 }
 
 .today-temperature-measure {
@@ -57,11 +60,12 @@ h3 {
 
 .today-temperature-unit {
   font-size: 40px;
+  font-weight: 500;
 }
 
-.today-temperature-icon img {
-  height: 56px;
-  margin: 16px 0 0 8px;
+.today-temperature-icon {
+  width: 72px;
+  margin: 0 0 0 8px;
 }
 
 .weather-details {
@@ -72,16 +76,26 @@ h3 {
   margin: 0 0 48px 0;
 }
 
+.weather-summary {
+  text-align: center;
+  font-weight: 500;
+}
+
+.weather-summary img {
+  text-align: center;
+  fill: #9978ec;
+}
+
 .search-city {
   padding: 0 32px 32px 32px;
 }
 
 .search-form-input {
-  font-size: 24px;
+  font-size: 20px;
   background-color: #f1fafa;
   border: #e5e7eb;
-  border-radius: 8px;
-  width: 75%;
+  border-radius: 12px;
+  width: 78%;
   padding: 16px 0 16px 24px;
   margin-right: 12px;
 }
@@ -91,16 +105,17 @@ h3 {
   font-weight: 400;
 }
 
-.search-form:selected {
-  outline-color: #a4cbcb;
+input:focus {
+  border-color: #a4cbcb;
 }
 
 .search-form-button {
   color: #f9fafb;
+  font-weight: 600;
   background-color: #63a6a5;
-  font-size: 24px;
+  font-size: 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 16px 40px;
 }
 

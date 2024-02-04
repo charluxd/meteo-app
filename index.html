@@ -24,19 +24,31 @@
             ></div>
           </h1>
           <div class="today-temperature-unit">ºC</div>
-          <div class="today-temperature-icon">
-            <img src="img/ic_cloudy.svg" alt="cloudy" />
+          <div>
+            <div id="icon"></div>
           </div>
         </div>
         <div>
-          <h2><span id="city-name"></span>, <span id="country"></span></h2>
+          <h2><span id="city-name"></span></h2>
         </div>
-        <h3><div id="time"></div></h3>
+        <h3>
+          Feels like <span id="feels-like-temp"></span>ºC | Your time:
+          <span id="time"></span>
+        </h3>
       </section>
       <section class="weather-details">
-        <div>☁️ <span id="description"></span></div>
-        <div>💧 Humidity: <span id="humidity"></span></div>
-        <div>💨 Wind: <span id="wind"></span></div>
+        <div class="weather-summary">
+          <img src="img/icon_condition.svg" alt="weather conditions" />
+          <span id="description"></span>
+        </div>
+        <div class="weather-summary">
+          <img src="img/icon_humidity.svg" alt="humidity" /> Humidity:
+          <span id="humidity"></span>
+        </div>
+        <div class="weather-summary">
+          <img src="img/icon_wind.svg" alt="wind" /> Wind:
+          <span id="wind"></span>
+        </div>
       </section>
       <section class="search-city">
         <form class="search-form" id="search-form">

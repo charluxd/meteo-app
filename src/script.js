@@ -2,15 +2,18 @@ function updateWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = response.data.temperature.current;
   let searchCity = document.querySelector("#city-name");
-  let countryElement = document.querySelector("#country");
+  let tempFeelingElement = document.querySelector("#feels-like-temp");
+  let temperatureFeeling = response.data.temperature.feels_like;
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
+  iconElement.innerHTML = `<img src ="${response.data.condition.icon_url}" class="today-temperature-icon" />`;
   searchCity.innerHTML = response.data.city;
-  countryElement.innerHTML = response.data.country;
+  tempFeelingElement.innerHTML = Math.round(temperatureFeeling);
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;

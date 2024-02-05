@@ -16,8 +16,8 @@ function updateWeather(response) {
   tempFeelingElement.innerHTML = Math.round(temperatureFeeling);
   timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  humidityElement.innerHTML = `&nbsp${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `&nbsp${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
 }
 
@@ -35,11 +35,15 @@ function formatDate(date) {
   ];
   let day = days[date.getDay()];
 
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function searchTemperature(city) {

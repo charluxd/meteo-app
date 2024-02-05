@@ -14,15 +14,15 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #4b5563;
-  padding: 8px 0;
+  padding: 0;
   margin: 0;
   padding-left: 48px;
 }
@@ -65,7 +65,7 @@ h2 {
 
 .today-temperature-icon {
   width: 72px;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 4px;
 }
 
 .weather-details {
@@ -77,13 +77,18 @@ h2 {
 }
 
 .weather-summary {
-  text-align: center;
+  display: flex;
+  align-items: center;
   font-weight: 500;
+}
+
+#weather-conditions {
+  text-transform: capitalize;
 }
 
 .weather-summary img {
   text-align: center;
-  fill: #9978ec;
+  padding-right: 4px;
 }
 
 .search-city {
@@ -105,13 +110,16 @@ h2 {
   font-weight: 400;
 }
 
+[type="search"]::-webkit-search-cancel-button {
+  margin-right: 24px;
+}
+
 input:focus {
-  border-color: #a4cbcb;
+  outline: #a4cbcb auto 1px;
 }
 
 .search-form-button {
   color: #f9fafb;
-  font-weight: 600;
   background-color: #63a6a5;
   font-size: 20px;
   border: none;

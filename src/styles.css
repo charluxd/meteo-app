@@ -73,7 +73,7 @@ h2 {
   display: flex;
   justify-content: space-around;
   padding: 16px 0;
-  margin: 0 0 48px 0;
+  margin: 0 0 24px 0;
 }
 
 .weather-summary {
@@ -89,6 +89,30 @@ h2 {
 .weather-summary img {
   text-align: center;
   padding-right: 4px;
+}
+
+.weather-forecast {
+  display: flex;
+  text-align: center;
+  padding: 0 40px;
+  margin: 0 0 24px 0;
+}
+
+.weather-day {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.weather-forecast-icon {
+  width: 72px;
+}
+
+.forecast-temperature {
+  margin: -8px 0 0 0;
+}
+
+.temperature-min {
+  font-weight: 300;
 }
 
 .search-city {

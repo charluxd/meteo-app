@@ -96,9 +96,10 @@ h2 {
   text-align: center;
   padding: 0 40px;
   margin: 0 0 24px 0;
+  justify-content: space-around;
 }
 
-.weather-day {
+.weather-forecast-date {
   font-size: 16px;
   color: #6b7280;
 }
@@ -107,12 +108,12 @@ h2 {
   width: 72px;
 }
 
-.forecast-temperature {
+.weather-forecast-temperature {
   margin: -8px 0 0 0;
 }
 
-.temperature-min {
-  font-weight: 300;
+.weather-forecast-min {
+  font-weight: 200;
 }
 
 .search-city {

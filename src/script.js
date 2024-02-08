@@ -59,7 +59,32 @@ function searchCity(event) {
   searchTemperature(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml += `
+  <div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <img
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+      alt="weather-forecast-icon"
+      class="weather-forecast-icon"
+    />
+    <div class="weather-forecast-temperature">
+      18ºC <span class="weather-forecast-min">/ 12ºC</span>
+    </div>
+  </div>
+`;
+  });
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCity);
 
 searchTemperature("California");
+displayForecast();

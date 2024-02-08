@@ -19,6 +19,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = `&nbsp${response.data.temperature.humidity}%`;
   windElement.innerHTML = `&nbsp${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = Math.round(temperature);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -59,7 +61,15 @@ function searchCity(event) {
   searchTemperature(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "ca80fb7d3o48t3c14460b13a3d83ca48";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
   let forecastHtml = "";
 
@@ -87,4 +97,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCity);
 
 searchTemperature("California");
-displayForecast();
